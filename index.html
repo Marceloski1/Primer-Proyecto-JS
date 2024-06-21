@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Reservas de Hotel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Sistema de Reservas de Hotel</h1>
+    <nav>
+        <button onclick="mostrarFormularioReserva()">Nueva Reserva</button>
+        <button onclick="mostrarReservas()">Mostrar Reservas</button>
+        <button onclick="cancelarReserva()">Cancelar Reserva</button>
+    </nav>
+    
+    <div id="formularioReserva" style="display:none;">
+        <h2>Nueva Reserva</h2>
+        <form id="reservaForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" required>
+            <label for="numeroHabitacion">Número de Habitación:</label>
+            <input type="number" id="numeroHabitacion" required>
+            <label for="fechaEntrada">Fecha de Entrada:</label>
+            <input type="date" id="fechaEntrada" required>
+            <label for="fechaSalida">Fecha de Salida:</label>
+            <input type="date" id="fechaSalida" required>
+            <button type="button" onclick="realizarReserva()">Reservar</button>
+        </form>
+    </div>
+    
+    <div id="listaReservas" style="display:none;">
+        <h2>Reservas</h2>
+        <ul id="reservas"></ul>
+    </div>
+    
+    <div id="cancelarReserva" style="display:none;">
+        <h2>Cancelar Reserva</h2>
+        <form id="cancelarForm">
+            <label for="numeroCancelar">Número de Habitación:</label>
+            <input type="number" id="numeroCancelar" required>
+            <button type="button" onclick="cancelar()">Cancelar</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
